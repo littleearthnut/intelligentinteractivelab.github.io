@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Description</title>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- 引用自己的库 -->
+	<link rel="stylesheet" href="../../resource/css/cite.css">
+	<script src="../../resource/js/cite.js"></script>
+	<link rel="shortcut icon" href="../../img/eeg-icon.svg">
+
+	<!-- 3.6.0最新 -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+	<!-- bootstrap 4.6.0 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+	<!-- tocbot 4.12.3 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.css">
+	<script src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js"></script>
+
+</head>
+
+<nav class="site-header sticky-top py-1">
+	<div class="container d-flex flex-column flex-md-row justify-content-between">
+		<a class="py-2" href="../../index.html" aria-label="回到主页">
+			<img src="../../resource/img/eeg-icon.svg" style="display:block;width:24px;height:24px" />
+			<!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+				stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
+				viewBox="0 0 24 24" focusable="false">
+				<title>回到主页</title>
+				<circle cx="12" cy="12" r="10"></circle>
+				<path
+					d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94">
+				</path>
+			</svg> -->
+		</a>
+		<a class="py-2 d-none d-md-inline-block" href="index.html">Home</a>
+		<a class="py-2 d-none d-md-inline-block" href="readme.html">Description</a>
+		<a class="py-2 d-none d-md-inline-block" href="download.html">Download</a>
+	</div>
+</nav>
+
+<body style="font-family: '微软雅黑';">
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+
+			</div>
+			<div class="col-8 js-toc-content">
+
+				<h2>dataset summary</h2>
+				The Confuse dataset consists of two parts:
+
+				The ratings from an online self-assessment where 120 one-minute extracts of music videos were each rated
+				by 14-16 volunteers based on arousal, valence and dominance.
+				The participant ratings, physiological recordings and face video of an experiment where 32 volunteers
+				watched a subset of 40 of the above music videos. EEG and physiological signals were recorded and each
+				participant also rated the videos as above. For 22 participants frontal face video was also recorded.
+				For a more thorough explanation of the dataset collection and its contents, see [1]
+				<img src="./resource/img/流程图.jpg" style="max-width: 800px;">
+				<h2>file listing</h2>
+				The following files are available (each explained in more detail below):
+
+				File name Format Part Contents
+				Online_ratings xls, csv, ods spreadsheet Online self-assessment All individual ratings from the online
+				self-assessment.
+				Video_list xls, csv, ods spreadsheet Both parts Names/YouTube links af the music videos used in the
+				online self-assessment and the experiment + stats of the individual ratings from the online
+				self-assessment.
+				Participant_ratings xls, csv, ods spreadsheet Experiment All ratings participants gave to the videos
+				during the experiment.
+				Participant_questionnaire xls, csv, ods spreadsheet Experiment The answers participants gave to the
+				questionnaire before the experiment.
+				Face_video Zip file Experiment The frontal face video recordings from the experiment for participants
+				1-22.
+				Data_original Zip file Experiment The original unprocessed physiological data recordings from the
+				experiment in BioSemi .bdf format
+				Data_preprocessed Zip file for Python and Matlab Experiment The preprocessed (downsampling, EOG removal,
+				filtering, segmenting etc.) physiological data recordings from the experiment in Matlab and
+				Python(numpy) formats
+				<h2>file details</h2>
+				online_ratings
+				This file contains all the individual video ratings collected during the online self-assessment. The
+				file is available in Open-Office Calc (online_ratings.ods), Microsoft Excel (online_ratings.xls), and
+				Comma-separated values (online_ratings.csv) formats.
+
+				The ratings were collected using an online self-assessment tool as described in [1]. Participants rated
+				arousal, valence and dominance using SAM mannequins on a discrete 9-point scale. In addition,
+				participants also rated the felt emotion using an emotion wheel (see [2]).
+
+				The table in the file has one row per individual rating and the following columns:
+
+			</div>
+			<div class="col-mb-12 col-2 kit-hidden-tb post-toc-content">
+				<div id="toc-container" class="post-toc">
+					<div class="toc"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<hr>
+	<footer class="blockquote text-center">
+		<dir class="row">
+			<div class="col-md-12 ">
+				<small class="d-block mb-3 text-muted">Intelligent Interaction Laboratory @ NWPU</small>
+
+				<small class="d-block mb-3 text-muted">All Rights Reserved © 2019-<div id="year"
+						style="display: inline-block">LastYear</div></small>
+			</div>
+		</dir>
+	</footer>
+</body>
+<script language="javascript" type="text/javascript">
+	add_head_id();
+
+	tocify();
+	footer_year();
+</script>
+
+</html>
